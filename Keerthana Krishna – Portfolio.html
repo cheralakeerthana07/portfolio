@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Keerthana Krishna | Computer Science student, AI/ML and software</title>
+<meta name="description" content="Portfolio of Cherala Keerthana Krishna, a third-year CSE student building web, mobile and machine learning projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF2EF;--surface:#E1E9E5;--ink:#14262B;--muted:#4A5E62;--line:#B9C7C2;--accent:#2442D6;--accent-ink:#fff;
+  --c0:#4B86C4;--c1:#2F6B4F;--c2:#D2BE5E;--c3:#8C939B;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--body:"Newsreader",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1C20;--surface:#172A2F;--ink:#E6EFEC;--muted:#9DB1B3;--line:#2C4348;--accent:#8EA2FF;--accent-ink:#0F1C20;--c0:#4B86C4;--c1:#3E8A66;--c2:#C9B552;--c3:#7D858D}}
+:root[data-theme="dark"]{--bg:#0F1C20;--surface:#172A2F;--ink:#E6EFEC;--muted:#9DB1B3;--line:#2C4348;--accent:#8EA2FF;--accent-ink:#0F1C20;--c0:#4B86C4;--c1:#3E8A66;--c2:#C9B552;--c3:#7D858D}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.15rem;line-height:1.6}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,.tile:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;font-family:var(--display);font-weight:500;font-size:1rem;flex-wrap:wrap;gap:.75rem}
+header.top nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+header.top a{color:var(--ink);text-decoration:none}
+header.top a:hover{color:var(--accent)}
+.hero{padding:3rem 0 3.5rem}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,8vw,5.6rem);line-height:.98;letter-spacing:-.03em;margin:0 0 1.25rem}
+.lede{max-width:36rem;font-size:1.35rem;color:var(--muted);margin:0 0 1.75rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{font-family:var(--display);font-weight:700;font-size:1rem;padding:.7rem 1.2rem;border-radius:.4rem;text-decoration:none;border:2px solid var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.map{margin-top:3rem}
+.grid{display:grid;grid-template-columns:repeat(26,1fr);gap:2px;border:2px solid var(--ink);padding:2px;background:var(--ink)}
+.tile{aspect-ratio:1;border:0;padding:0;margin:0;cursor:crosshair}
+.tile[data-k="0"]{background:var(--c0)}.tile[data-k="1"]{background:var(--c1)}.tile[data-k="2"]{background:var(--c2)}.tile[data-k="3"]{background:var(--c3)}
+.tile:hover{filter:brightness(1.25)}
+.legend{display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center;margin-top:.75rem;font-size:.95rem;color:var(--muted)}
+.legend i{display:inline-block;width:.9rem;height:.9rem;margin-right:.4rem;vertical-align:-1px}
+#cap{margin-left:auto;font-family:var(--display);font-weight:500;color:var(--ink);min-height:1.5em}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:700;font-size:1.9rem;letter-spacing:-.01em;margin:0 0 1.5rem}
+.two{display:grid;grid-template-columns:1fr 2fr;gap:2rem}
+.two>h2{margin:0}
+@media (max-width:700px){.two{grid-template-columns:1fr;gap:1rem}.grid{grid-template-columns:repeat(13,1fr)}}
+.proj{padding:1.25rem 0;border-bottom:1px solid var(--line)}
+.proj:first-child{padding-top:0}.proj:last-child{border-bottom:0}
+.proj h3{font-family:var(--display);font-size:1.35rem;margin:0 0 .25rem}
+.proj p{margin:.25rem 0 .5rem}
+.tags{font-family:var(--display);font-size:.9rem;color:var(--muted)}
+.status{font-family:var(--display);font-size:.85rem;font-weight:700;background:var(--surface);padding:.1rem .5rem;border-radius:.3rem;margin-left:.5rem;vertical-align:2px}
+ul.plain{list-style:none;margin:0;padding:0}
+ul.plain li{padding:.45rem 0;border-bottom:1px solid var(--line)}
+ul.plain li:last-child{border-bottom:0}
+ul.plain span{display:block;font-size:.95rem;color:var(--muted)}
+.skills dt{font-family:var(--display);font-weight:700;margin-top:.9rem}
+.skills dt:first-child{margin-top:0}
+.skills dd{margin:0}
+footer{padding:3rem 0 4rem;border-top:1px solid var(--line)}
+footer h2{font-size:2.4rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <span>Keerthana Krishna</span>
+  <nav><a href="#projects">Projects</a><a href="#training">Training</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<div class="hero">
+  <h1>Cherala Keerthana Krishna</h1>
+  <p class="lede">Third-year Computer Science student who builds web apps, mobile apps and machine learning tools. Trained by IIRS-ISRO to read satellite imagery with AI.</p>
+  <div class="btns">
+    <a class="btn primary" href="#projects">See my projects</a>
+    <a class="btn" href="mailto:cheralakeerthana07@gmail.com">Email me</a>
+  </div>
+  <div class="map">
+    <div class="grid" id="grid" role="img" aria-label="Sample land-cover map classified into water, forest, farmland and built-up land"></div>
+    <div class="legend">
+      <span><i style="background:var(--c0)"></i>Water</span>
+      <span><i style="background:var(--c1)"></i>Forest</span>
+      <span><i style="background:var(--c2)"></i>Farmland</span>
+      <span><i style="background:var(--c3)"></i>Built-up</span>
+      <span id="cap" aria-live="polite">Hover a tile to classify it</span>
+    </div>
+  </div>
+</div>
+
+<section id="projects" class="two">
+  <h2>Projects</h2>
+  <div>
+    <div class="proj">
+      <h3>SkinSense<span class="status">In progress</span></h3>
+      <p>A mobile app that takes a photo of a skin condition and shows the machine learning model's classification. Built with reusable components, hooks and constants so it stays easy to maintain.</p>
+      <div class="tags">React Native, TypeScript, Expo, Python, TensorFlow/Keras</div>
+    </div>
+    <div class="proj">
+      <h3>Smart Tourism Guide</h3>
+      <p>A web app for finding travel destinations, viewing them on interactive maps and planning itineraries. I designed the MySQL database and built the REST APIs behind it.</p>
+      <div class="tags">JavaScript, Node.js, Express.js, REST APIs, MySQL</div>
+    </div>
+    <div class="proj">
+      <h3>Python mini-projects</h3>
+      <p>A command-line stock portfolio tracker that calculates stock metrics, and a rule-based chatbot that handles user queries with conditional logic. Built during the CodeAlpha program.</p>
+      <div class="tags">Python, CLI, Git</div>
+    </div>
+  </div>
+</section>
+
+<section id="training" class="two">
+  <h2>Training and certificates</h2>
+  <div>
+    <p>In August 2026 I completed the national training <em>AI/ML for Geodata Analytics</em> at IIRS-ISRO in Dehradun. I worked with machine learning on geospatial data, applying preprocessing and hyperparameter tuning to satellite imagery.</p>
+    <ul class="plain">
+      <li>Verified Certificate, AI/ML for Geodata Analytics<span>ISRO (IIRS), 2026</span></li>
+      <li>Build AI Agents with Microsoft Copilot Studio<span>Microsoft Learn, 2026</span></li>
+      <li>Fundamentals of Sustainability and Technology<span>IBM SkillsBuild, 2026</span></li>
+      <li>Data Analytics Job Simulation<span>Deloitte, 2026</span></li>
+      <li>Google Cloud Arcade / GEAR Credential<span>Google Cloud, 2026</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="skills" class="two">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>Python, C, Java, JavaScript, TypeScript, SQL</dd>
+    <dt>Web and mobile</dt><dd>React Native, Expo, Node.js, Express.js, REST APIs, HTML, CSS</dd>
+    <dt>AI and data</dt><dd>Machine learning, deep learning, CNNs, geodata analytics, data structures and algorithms, DBMS</dd>
+    <dt>Tools</dt><dd>Git, GitHub, MySQL, VS Code</dd>
+  </dl>
+</section>
+
+<section class="two">
+  <h2>Education</h2>
+  <ul class="plain">
+    <li>B.Tech in Computer Science and Engineering, CGPA 8.38 / 10<span>Sumathi Reddy Institute of Technology for Women, 2024 to 2028 (expected)</span></li>
+    <li>Intermediate (Class XII), 94.6%<span>Alphores Junior College, 2022 to 2024</span></li>
+    <li>Secondary School Certificate (Class X), CGPA 9.5 / 10<span>Standard High School, 2021 to 2022</span></li>
+  </ul>
+</section>
+</main>
+
+<footer id="contact">
+  <h2>Let's talk about internships</h2>
+  <p>I'm looking for software engineering and AI/ML internships. Based in Hanamkonda, Telangana.</p>
+  <p><a href="mailto:cheralakeerthana07@gmail.com">cheralakeerthana07@gmail.com</a><br>
+  <a href="https://github.com/cheralakeerthana07">GitHub</a> and <a href="https://linkedin.com/in/keerthana-krishna-220626325">LinkedIn</a></p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var names=["Water","Forest","Farmland","Built-up"],cols=26,rows=12,g=document.getElementById("grid"),cap=document.getElementById("cap");
+  function h(x,y){var s=Math.sin(x*127.1+y*311.7)*43758.5453;return s-Math.floor(s)}
+  function n(x,y){var xi=Math.floor(x),yi=Math.floor(y),xf=x-xi,yf=y-yi,u=xf*xf*(3-2*xf),v=yf*yf*(3-2*yf);
+    return (h(xi,yi)*(1-u)+h(xi+1,yi)*u)*(1-v)+(h(xi,yi+1)*(1-u)+h(xi+1,yi+1)*u)*v}
+  for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){
+    var v=n(c/5,r/4)*.7+n(c/2.2+9,r/2.2+4)*.3,k=v<.38?0:v<.55?1:v<.72?2:3;
+    var t=document.createElement("button");t.type="button";t.className="tile";t.setAttribute("data-k",k);t.setAttribute("aria-label",names[k]+" at row "+(r+1)+", column "+(c+1));
+    g.appendChild(t)}
+  function show(e){var t=e.target;if(t.classList&&t.classList.contains("tile"))cap.textContent="Predicted class: "+names[t.getAttribute("data-k")]}
+  g.addEventListener("mouseover",show);g.addEventListener("focusin",show);g.addEventListener("click",show);
+})();
+</script>
+</body>
+</html>
